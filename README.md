@@ -1,0 +1,1 @@
+https://baterydetector.netlify.app/
