@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+    font-family: 'Ubuntu';
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --gradient-color-red: linear-gradient(90deg, hsl(7, 89%, 46%) 15%, hsl(11, 93%, 68%) 100%);
+    --gradient-color-orange : linear-gradient(90deg, hsl(22,89%,46%) 15%,hsl(54,90%,68%)100%);
+    --gradient-color-yellow : linear-gradient(90deg,hsl(54,89%,46%) 15%,hsl(92,90%,45%)100%);
+    --gradient-color-green : linear-gradient(90deg,hsl(92,89%,46%) 15%,hsl(92,90%,68%)100%);
+}
+
+body{
+    background-color: #FF0000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2364FF34'/%3E%3Cstop offset='1' stop-color='%23FF0000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFE736' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFE736' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;   
+    color: #fff;
+}
+
+.battery{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin: 0 1.5rem;
+}
+
+.Bcard{
+    position: relative;
+    width: 270px;
+    height: 240px;
+    background-color: #FFE034;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23b5ff2c'/%3E%3Cstop offset='1' stop-color='%23b5ff2c' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ff7b1a'/%3E%3Cstop offset='1' stop-color='%23ff7b1a' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23ffee13'/%3E%3Cstop offset='1' stop-color='%23ffee13' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FFE034'/%3E%3Cstop offset='1' stop-color='%23FFE034' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%2345FF25'/%3E%3Cstop offset='1' stop-color='%2345FF25' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23FF0000'/%3E%3Cstop offset='1' stop-color='%23FF0000' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.Btext{
+    margin-bottom: 0.5rem;
+}
+
+.Bpercentage{
+    font-size: 2.5rem;
+}
+
+.Bcard:hover{
+    cursor: pointer;
+}
+
+.Bstatus{
+    position: absolute;
+    bottom: 3.5rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.Bstatus i{
+    font-size: 1.25rem;
+}
+
+.Bpill{
+    position: relative;
+    width: 75px;
+    height: 180px;
+    box-shadow: inset 20px 0 48px hsl(0, 0%, 16%), inset -4px 12px 48px hsl(0, 0%, 56%);
+    border-radius: 3rem;
+    justify-self: flex-start;
+    background-color: #22222200;
+    border: none;
+
+}
+
+.Blevel{
+    position: absolute;
+    inset: 2px;
+    border-radius: 3rem;
+    overflow: hidden;
+    border: none;
+}
+
+.Bliquid{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: var(--gradient-color-red);
+    transition: 0.3s;
+    border: none;
+}
+
+.Bliquid::after{
+    content: "";
+    position: absolute;
+    height: 8px;
+    box-shadow: inset 0 -3px 6px hsla(0, 0%, 0%, 0.2);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: -4px;
+    border-radius: 50%;
+}
+
+.green-color{
+    background: var(--gradient-color-green);
+}
+
+.animated-green{
+    background: var(--gradient-color-green);
+    animation: animated-charging 1.2s infinite alternate;
+}
+
+.animated-red{
+    background: var(--gradient-color-red);
+    animation: animated-low 1.2s infinite alternate;
+}
+
+.animated-green, .animated-red, .green-color{
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes animated-charging{
+    0%{
+        text-shadow: none;
+    }
+    100%{
+        text-shadow: 0 0 6px hsl(92, 90%, 68%);
+    }
+}
+
+@keyframes animated-low{
+    0%{
+        text-shadow: none;
+    }
+    100%{
+        text-shadow: 0 0 8px hsl(7, 89%, 46%);
+    }
+}
+
+.gradient-color-red, .green-color-red::after{
+    background: var(--gradient-color-red);
+}
+
+.gradient-color-green, .green-color-green::after{
+    background: var(--gradient-color-green);
+}
+
+.gradient-color-orange, .green-color-orange::after{
+    background: var(--gradient-color-orange);
+}
+
+.gradient-color-yellow, .green-color-yellow::after{
+    background: var(--gradient-color-yellow);
+}
